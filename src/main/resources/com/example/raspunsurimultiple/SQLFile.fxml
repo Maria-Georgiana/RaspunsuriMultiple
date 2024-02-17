@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.raspunsurimultiple.SQLController">
+
+    <TableView fx:id="pacientTable" editable="true" prefHeight="445.0" prefWidth="689.0" tableMenuButtonVisible="true">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" />
+            <TableColumn fx:id="textColumn" text="Text" />
+            <TableColumn fx:id="raspunsAColumn" text="Raspuns A" />
+            <TableColumn fx:id="raspunsBColumn" text="Raspuns B" />
+            <TableColumn fx:id="raspunsCColumn" text="Raspuns C" />
+            <TableColumn fx:id="raspunsCorectColumn" text="Raspuns Corect" />
+            <TableColumn fx:id="dificultateColumn" text="Dificultate" />
+        </columns>
+    </TableView>
+    <HBox>
+        <Label text="Text" />
+        <TextField fx:id="txtText" prefHeight="25.0" prefWidth="142.0" />
+        <Label text="RaspunsA" />
+        <TextField fx:id="txtRaspunsA" prefWidth="80" />
+        <Label text="RaspunsB" />
+        <TextField fx:id="txtRaspunsB" prefWidth="80" />
+        <Label text="RaspunsC" />
+        <TextField fx:id="txtRaspunsC" prefWidth="80" />
+        <Label text="Raspuns Corect" />
+        <TextField fx:id="txtRaspunsCorect" prefWidth="80" />
+        <Label text="Dificultate" />
+        <TextField fx:id="txtDificultate" prefWidth="80" />
+        <Button fx:id="btnAdd" graphicTextGap="0.0" onAction="#onAddButtonClick" text="Adauga" textFill="#d41515" textOverrun="CENTER_ELLIPSIS">
+            <HBox.margin>
+                <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+            </HBox.margin>
+        </Button>
+    </HBox>
+    <HBox>
+        <Button fx:id="btnRedare" onAction="#onListaRedareButtonClick" text="Test grila" textFill="#d41515">
+            <HBox.margin>
+                <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+            </HBox.margin>
+        </Button>
+    </HBox>
+    <ListView fx:id="intrebariListView" prefHeight="200.0" prefWidth="300.0" />
+</VBox>
